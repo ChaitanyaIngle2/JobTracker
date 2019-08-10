@@ -12,11 +12,13 @@ namespace JobTracker.Models
         // Array to store possible Status names
         private string[] statuses = new string[6];
 
+        // -------------------------------------------------
+        // Private Class Variables
         private int statusId;
         private string statusName;
 
         // -------------------------------------------------
-        // Class Variables with Accessors
+        // Public Accessors
         public int StatusId
         {
             get { return statusId; }
