@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using JobTracker.Models;
+using JobTracker.Models.ViewModels;
 
 namespace JobTracker.Controllers
 {
@@ -17,7 +19,24 @@ namespace JobTracker.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
-            return View();
+            var status = new Status
+            {
+                StatusId = 1,
+                StatusName = "Applied"
+            };
+            var tempJob = new Job()
+            {
+                Company = "Microsoft",
+                Position = "Developer",
+                Status = status
+            };
+
+            var viewModel = new AboutViewModel()
+            {
+                Job = tempJob
+            };
+
+            return View(viewModel);
         }
 
         public ActionResult Contact()
