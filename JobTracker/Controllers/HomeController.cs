@@ -19,11 +19,9 @@ namespace JobTracker.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
-            var status = new Status
-            {
-                StatusId = 1,
-                StatusName = "Applied"
-            };
+            var status = new Status(0);
+
+
             var tempJob = new Job()
             {
                 Company = "Microsoft",

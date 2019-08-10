@@ -8,13 +8,18 @@ namespace JobTracker.Models
 {
     public class Status
     {
+        // -------------------------------------------------
         // Array to store possible Status names
         private string[] statuses = new string[6];
 
         private int statusId;
+        private string statusName;
+
+        // -------------------------------------------------
+        // Class Variables with Accessors
         public int StatusId
         {
-            get { return StatusId; }
+            get { return statusId; }
             set
             {
                 if (value < 0 || value > 5) {
@@ -26,8 +31,6 @@ namespace JobTracker.Models
             }
         }
 
-        // 
-        private string statusName;
         public string StatusName
         {
             get { return statusName; }
@@ -39,13 +42,19 @@ namespace JobTracker.Models
                 }
                 else
                 {
-
+                    statusName = statuses[0];
                 }
             }
         }
 
+        // -------------------------------------------------
+        // Constructors
         public Status(int id)
         {
+            if (id < 0 || id > 5)
+            {
+                id = 0;
+            }
             statusId = id;
 
             statuses[0] = "Not Submitted";
@@ -55,7 +64,7 @@ namespace JobTracker.Models
             statuses[4] = "Rejected";
             statuses[5] = "Hired";
 
-            StatusName = statuses[statusId];
+            statusName = statuses[statusId];
         }
     }
 }
