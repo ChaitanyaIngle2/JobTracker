@@ -43,5 +43,20 @@ namespace JobTracker.Controllers
 
             return View();
         }
+
+        public ActionResult Applications()
+        {
+            return View();
+        }
+
+        public ActionResult AddPosition()
+        {
+            return View();
+        }
+
+        public ActionResult UpdateStatus()
+        {
+            return View();
+        }
     }
 }
