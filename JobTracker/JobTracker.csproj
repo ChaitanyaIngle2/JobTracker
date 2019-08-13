@@ -206,6 +206,10 @@
     <Compile Include="Migrations\201908130200049_RemovedDatefromStatuses.Designer.cs">
       <DependentUpon>201908130200049_RemovedDatefromStatuses.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908130202193_PopulateStatuses1.cs" />
+    <Compile Include="Migrations\201908130202193_PopulateStatuses1.Designer.cs">
+      <DependentUpon>201908130202193_PopulateStatuses1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -310,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908130200049_RemovedDatefromStatuses.resx">
       <DependentUpon>201908130200049_RemovedDatefromStatuses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908130202193_PopulateStatuses1.resx">
+      <DependentUpon>201908130202193_PopulateStatuses1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
