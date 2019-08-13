@@ -198,6 +198,10 @@
     <Compile Include="Migrations\201908130150558_AddedDateToStatuses.Designer.cs">
       <DependentUpon>201908130150558_AddedDateToStatuses.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908130154572_PopulateStatuses.cs" />
+    <Compile Include="Migrations\201908130154572_PopulateStatuses.Designer.cs">
+      <DependentUpon>201908130154572_PopulateStatuses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -296,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908130150558_AddedDateToStatuses.resx">
       <DependentUpon>201908130150558_AddedDateToStatuses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908130154572_PopulateStatuses.resx">
+      <DependentUpon>201908130154572_PopulateStatuses.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
