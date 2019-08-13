@@ -13,6 +13,7 @@ namespace JobTracker.Models
 
         public int Id { get; set; }
         public string StatusName { get; set; }
+        public DateTime Date { get; set; }
 
     }
 }

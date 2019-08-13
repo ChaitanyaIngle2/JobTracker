@@ -21,7 +21,6 @@ namespace JobTracker.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Status> Statuses { get; set; }
-        public DbSet<>
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
