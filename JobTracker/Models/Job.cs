@@ -7,9 +7,11 @@ namespace JobTracker.Models
 {
     public class Job
     {
-        public String Company { get; set; }
-        public String Position { get; set; }
+        public int Id { get; set; }
+        public string Company { get; set; }
+        public string Position { get; set; }
         public Status Status { get; set; }
+        public int StatusId { get; set; }
         public DateTime Date { get; set; }
     }
 }

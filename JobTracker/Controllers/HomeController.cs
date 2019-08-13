@@ -19,22 +19,7 @@ namespace JobTracker.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
-            var status = new Status(0);
-
-
-            var tempJob = new Job()
-            {
-                Company = "Microsoft",
-                Position = "Developer",
-                Status = status
-            };
-
-            var viewModel = new AboutViewModel()
-            {
-                Job = tempJob
-            };
-
-            return View(viewModel);
+            return View();
         }
 
         public ActionResult Contact()
