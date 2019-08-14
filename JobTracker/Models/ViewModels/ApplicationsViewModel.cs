@@ -7,5 +7,6 @@ namespace JobTracker.Models.ViewModels
 {
     public class ApplicationsViewModel
     {
+        public List<Status> Statuses { get; set; }
     }
 }

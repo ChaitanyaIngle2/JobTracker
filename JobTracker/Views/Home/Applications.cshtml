@@ -1,7 +1,14 @@
-﻿
+﻿@* @Model JobTracker.Models.ViewModels.ApplicationsViewModel *@
+
 @{
     ViewBag.Title = "Applications";
 }
 
 <h2>Applications</h2>
+
+<h2>Statuses</h2>
+@foreach (var stat in Model.Statuses)
+{
+    <h3>@stat.StatusName</h3>
+}
 

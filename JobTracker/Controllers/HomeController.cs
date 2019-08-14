@@ -10,6 +10,18 @@ namespace JobTracker.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext _context;
+
+        public HomeController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         public ActionResult Index()
         {
             return View();
@@ -31,7 +43,14 @@ namespace JobTracker.Controllers
 
         public ActionResult Applications()
         {
-            return View();
+            var statuses = _context.Statuses.ToList();
+
+            var viewModel = new ApplicationsViewModel()
+            {
+                Statuses = statuses
+            };
+
+            return View(viewModel);
         }
 
         public ActionResult AddPosition()
